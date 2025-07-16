@@ -1,11 +1,10 @@
-/*import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
+import { Module } from '@nestjs/common';
+import { UsersService } from './users.service';
 import { UsersController } from './users.controller';
-import{user}
 
 @Module({
-  controllers: [UsersController]
+  controllers: [UsersController],
+  providers: [UsersService],
+  exports: [UsersService], 
 })
-export class UsersModule {
-  
-}*/
+export class UsersModule {}
